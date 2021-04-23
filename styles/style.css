@@ -1,0 +1,284 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Rubik', 'Roboto', sans-serif;
+  background-color: #fff8f5;
+  }
+
+.container{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: space-between;
+}
+
+/*Barre de navigation*/
+
+header{
+  width: 100%;
+  height: 200px;
+  font-size: 16px;
+  background-color: #9672de;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+
+nav{
+  width: 50%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#logo{
+  width: auto;
+  height: 120px;
+}
+
+.tab_projet {
+  height: fit-content;
+  width: fit-content;
+  color: #fff;
+  font-size: 2.2em;
+  margin: 1em;
+}
+
+.nav_btn{
+  border: 5px;
+  border-style: solid;  /*sans border style pas de bordure ... */
+  border-color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  background: transparent;
+  font-size: 2.2em;
+}
+
+
+
+a{
+  text-decoration: none;
+  color: white;
+  padding: 1em;
+}
+
+/*Présentation*/
+
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 75vh 40vh;
+  grid-template-areas: 
+  "bl br br"
+  "POD1 POD2 POD3";
+  row-gap: 30px;
+  column-gap: 30px;
+  margin: 0px 35px 45px 35px;
+}
+
+.block_left{
+  grid-area: bl;
+  justify-self: center;
+  align-self: center;
+  display: inline;
+  text-align: center;
+}
+
+h1{
+  font-size: 3em;
+  font-weight: bolder;
+  color: white;
+  text-shadow: -0.06em 1px 1px #9672de;
+  text-align: center;
+}
+
+.swipe_btn{
+  background-color: #9672de;
+  border: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 1.8em;
+  padding: 10px 10px 10px 10px;
+}
+
+.block_right{
+  grid-area: br;
+  align-self: center;
+}
+
+.img_main {
+  max-width: 100%;
+  max-height: 100%; /*Prends la place max du container*/
+}
+
+/*Points de différenciation*/
+
+.POD1{
+  grid-area: POD1;
+  border: 1px solid #eaeaea;
+  border-radius: 15px;
+  box-shadow: 15px 10px 20px 1px rgb(209, 206, 214); /* offset-x | offset-y | blur-radius | spread-radius | color */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.POD2{
+  grid-area: POD2;
+  border: 1px solid #eaeaea;
+  border-radius: 15px;
+  box-shadow: 15px 10px 20px 1px rgb(209, 206, 214);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;  
+}
+
+.POD3{
+  grid-area: POD3;
+  border: 1px solid #eaeaea;
+  border-radius: 15px;
+  box-shadow: 15px 10px 20px 1px rgb(209, 206, 214);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;  
+}
+
+h2{
+  font-size: 1.6em;
+  color: #9672de;
+  font-weight: bolder;
+  text-align: center;
+}
+
+img{
+max-width: 20%;
+}
+
+p{
+  font-size: 1em;
+  color: #000000;
+  text-align: center;
+}
+
+/* Bas de page */
+
+
+/* ESSAI 1 AVEC FLEXBOX
+ footer{                             
+  width: 100%;
+  height: 100px;
+  font-size: 16px;
+  background-color: #9672de;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+
+.sm_link{
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.sm_link ul{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+ Je n'arrive une bonne largeur
+ .sm_link li{             
+  list-style: none;
+  display: inline;
+  padding: 0;
+}
+
+.sm_link img{
+  width: 100px;
+  height: 100%;
+  text-align: center;
+} */
+
+
+
+/* Essai 2 avec juste li
+ footer{                             Possible à faire sans flexbox???
+  width: 100%;
+  height: 100px;
+  font-size: 16px;
+  background-color: #9672de;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.sm_link{
+  align-self: center;
+}
+
+.sm_link ul{
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.sm_link li{
+  display: inline-block;
+}
+
+.sm_link img{
+  width: 200px;
+  height: 100%;
+} */
+
+footer{                             
+  width: 100%;
+  height: 100px;
+  font-size: 16px;
+  background-color: #9672de;
+  display: flex;             /* ou grid ?*/
+  justify-content: center;
+  align-content: center;
+}
+
+
+.sm_link{
+  width: 25%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sm_link a{
+  width: 4em;
+  padding: 0;
+  margin:0;
+}
+
+.sm_link img {
+  margin-top: 4px;
+  max-width: 100%;
+  max-height: 100%; /*Prends la place max du container*/
+}
